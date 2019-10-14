@@ -1,0 +1,27 @@
+<% include partials/header %>
+
+
+<div class="container">
+
+        <h1>This is Cart Page </h1>
+
+        <div class="card">
+                        <div class="card-body" style="border: 5px solid grey">
+                        <h2 class="card-title"> Your Products </h2>
+                                <% prodList.forEach(function(prod){ %>
+                                        
+                                        <div class="card">
+                                                <div class="card-body">
+                                                <h4 class="card-title"> <%= prod.name %> </h4>
+                                                <p class="card-text"><%= prod.desc %></p>
+                                                <a href="#" class="card-link">Card link</a>
+                                                <a href="#" class="card-link">Another link</a>
+                                                </div>
+                                        </div>
+                                        <br>
+                                <% }) %>
+        <form action="/payment" method="GET"><button class="btn btn-large btn-success" > Proceed to Payment </button></form>
+
+</div>
+
+<% include partials/footer %>
